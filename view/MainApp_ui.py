@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'cadastro.ui'
+## Form generated from reading UI file 'MainApp.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.7.2
 ##
@@ -20,13 +20,13 @@ from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
     QPushButton, QSizePolicy, QSpacerItem, QStackedWidget,
     QTabWidget, QTableWidget, QTableWidgetItem, QToolBox,
     QVBoxLayout, QWidget)
-import icons_rc
+import resources.icons_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(956, 563)
+        MainWindow.resize(965, 605)
         MainWindow.setMouseTracking(False)
         MainWindow.setStyleSheet(u"background-color: rgb(0, 0, 0);")
         MainWindow.setAnimated(True)
@@ -115,7 +115,7 @@ class Ui_MainWindow(object):
 "}")
         self.pg_menu = QWidget()
         self.pg_menu.setObjectName(u"pg_menu")
-        self.pg_menu.setGeometry(QRect(0, 0, 182, 442))
+        self.pg_menu.setGeometry(QRect(0, 0, 182, 484))
         self.verticalLayout_4 = QVBoxLayout(self.pg_menu)
         self.verticalLayout_4.setSpacing(6)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
@@ -161,7 +161,7 @@ class Ui_MainWindow(object):
         self.toolBox.addItem(self.pg_menu, u"Menu")
         self.pg_informacoes = QWidget()
         self.pg_informacoes.setObjectName(u"pg_informacoes")
-        self.pg_informacoes.setGeometry(QRect(0, 0, 182, 442))
+        self.pg_informacoes.setGeometry(QRect(0, 0, 182, 484))
         self.verticalLayout_5 = QVBoxLayout(self.pg_informacoes)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.verticalLayout_5.setContentsMargins(-1, 9, 0, -1)
@@ -199,7 +199,7 @@ class Ui_MainWindow(object):
         self.btn_toggle = QPushButton(self.top_frame)
         self.btn_toggle.setObjectName(u"btn_toggle")
         icon = QIcon()
-        icon.addFile(u":/icons/images/icons/menu_icon.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon.addFile(u":/icons/imgs/icons/menu_icon.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.btn_toggle.setIcon(icon)
         self.btn_toggle.setIconSize(QSize(32, 32))
 
@@ -578,7 +578,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.toolBox.setCurrentIndex(0)
-        self.pages_frame.setCurrentIndex(1)
+        self.pages_frame.setCurrentIndex(3)
         self.tabWidget.setCurrentIndex(0)
 
 
@@ -597,7 +597,7 @@ class Ui_MainWindow(object):
         self.toolBox.setItemText(self.toolBox.indexOf(self.pg_informacoes), QCoreApplication.translate("MainWindow", u"Informa\u00e7\u00f5es", None))
         self.btn_toggle.setText("")
         self.label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Sistema de Cadastro</span></p></body></html>", None))
-        self.img_logo.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/window/images/icons/app/app-icon.png\"/></p></body></html>", None))
+        self.img_logo.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/window/imgs/icons/app/app_icon.png\"/></p></body></html>", None))
         self.let_cnpj.setPlaceholderText(QCoreApplication.translate("MainWindow", u"CNPJ", None))
         self.let_nome_empresarial.setText("")
         self.let_nome_empresarial.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Nome Empresarial", None))
@@ -637,10 +637,10 @@ class Ui_MainWindow(object):
         self.btn_excluir.setText(QCoreApplication.translate("MainWindow", u"Excluir", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Empresas", None))
         self.lbl_contatos_title.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:24pt; font-weight:600;\">CONTATOS</span></p></body></html>", None))
-        self.lbl_whatsapp.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/white_information/images/icons/info_icons/white_whatsapp_icon.png\"/><span style=\" font-size:26pt; font-weight:600; vertical-align:super;\">WhastApp</span></p><p align=\"center\"><br/></p></body></html>", None))
-        self.lbl_email.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/white_information/images/icons/info_icons/white_email_icon.png\"/><span style=\" font-size:26pt; font-weight:600; vertical-align:super;\">Email</span></p><p align=\"center\"><br/></p></body></html>", None))
-        self.lbl_instagram.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/white_information/images/icons/info_icons/white_instagram_icon.png\"/><span style=\" font-size:26pt; font-weight:600; vertical-align:super;\">Instagram</span></p></body></html>", None))
-        self.lbl_github.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/white_information/images/icons/info_icons/white_github_icon.png\"/><span style=\" font-size:26pt; font-weight:600; vertical-align:super;\">GitHub</span></p></body></html>", None))
+        self.lbl_whatsapp.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/white_information/imgs/icons/info_icons/white_whatsapp_icon.png\"/><span style=\" font-size:26pt; font-weight:600; vertical-align:super;\">WhastApp</span></p><p align=\"center\"><br/></p></body></html>", None))
+        self.lbl_email.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/white_information/imgs/icons/info_icons/white_email_icon.png\"/><span style=\" font-size:26pt; font-weight:600; vertical-align:super;\">Email</span></p><p align=\"center\"><br/></p></body></html>", None))
+        self.lbl_instagram.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/white_information/imgs/icons/info_icons/white_instagram_icon.png\"/><span style=\" font-size:26pt; font-weight:600; vertical-align:super;\">Instagram</span></p></body></html>", None))
+        self.lbl_github.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/white_information/imgs/icons/info_icons/white_github_icon.png\"/><span style=\" font-size:26pt; font-weight:600; vertical-align:super;\">GitHub</span></p></body></html>", None))
         self.lbl_sobre_title.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:24pt; font-weight:600;\">SOBRE</span></p></body></html>", None))
         self.lbl_sobre_descricao.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"justify\"><span style=\" font-size:12pt;\">Este sistema faz consulta do CNPJ utilizando API da Receita Federal e faz o cadastro em um banco de dados SQLITE3. Objetivo desse sistema \u00e9 aprender a usar Python e o PySide6 para o desenvolvimento de aplica\u00e7\u00f5es modernas.</span></p></body></html>", None))
         self.lbl_footer.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">\u00a9 Auris 2024</span></p></body></html>", None))

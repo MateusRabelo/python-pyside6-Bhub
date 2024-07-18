@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>956</width>
-    <height>563</height>
+    <width>965</width>
+    <height>605</height>
    </rect>
   </property>
   <property name="mouseTracking">
@@ -169,7 +169,7 @@ color: #ffffff
                <x>0</x>
                <y>0</y>
                <width>182</width>
-               <height>442</height>
+               <height>484</height>
               </rect>
              </property>
              <attribute name="label">
@@ -296,7 +296,7 @@ color: #ffffff
                <x>0</x>
                <y>0</y>
                <width>182</width>
-               <height>442</height>
+               <height>484</height>
               </rect>
              </property>
              <attribute name="label">
@@ -372,7 +372,7 @@ color: #ffffff
             </property>
             <property name="icon">
              <iconset resource="../resources/icons.qrc">
-              <normaloff>:/icons/images/icons/menu_icon.png</normaloff>:/icons/images/icons/menu_icon.png</iconset>
+              <normaloff>:/icons/imgs/icons/menu_icon.png</normaloff>:/icons/imgs/icons/menu_icon.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -428,14 +428,14 @@ color: #ffffff
           <item>
            <widget class="QStackedWidget" name="pages_frame">
             <property name="currentIndex">
-             <number>1</number>
+             <number>3</number>
             </property>
             <widget class="QWidget" name="pg_home">
              <layout class="QVBoxLayout" name="verticalLayout_7">
               <item>
                <widget class="QLabel" name="img_logo">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/window/images/icons/app/app-icon.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/window/imgs/icons/app/app_icon.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -876,28 +876,28 @@ QFrame{
               <item>
                <widget class="QLabel" name="lbl_whatsapp">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/white_information/images/icons/info_icons/white_whatsapp_icon.png&quot;/&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; vertical-align:super;&quot;&gt;WhastApp&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/white_information/imgs/icons/info_icons/white_whatsapp_icon.png&quot;/&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; vertical-align:super;&quot;&gt;WhastApp&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QLabel" name="lbl_email">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/white_information/images/icons/info_icons/white_email_icon.png&quot;/&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; vertical-align:super;&quot;&gt;Email&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/white_information/imgs/icons/info_icons/white_email_icon.png&quot;/&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; vertical-align:super;&quot;&gt;Email&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QLabel" name="lbl_instagram">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/white_information/images/icons/info_icons/white_instagram_icon.png&quot;/&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; vertical-align:super;&quot;&gt;Instagram&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/white_information/imgs/icons/info_icons/white_instagram_icon.png&quot;/&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; vertical-align:super;&quot;&gt;Instagram&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QLabel" name="lbl_github">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/white_information/images/icons/info_icons/white_github_icon.png&quot;/&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; vertical-align:super;&quot;&gt;GitHub&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/white_information/imgs/icons/info_icons/white_github_icon.png&quot;/&gt;&lt;span style=&quot; font-size:26pt; font-weight:600; vertical-align:super;&quot;&gt;GitHub&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>

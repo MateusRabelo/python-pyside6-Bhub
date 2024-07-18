@@ -1,35 +1,35 @@
 <RCC>
   <qresource prefix="images">
-    <file>images/login-image.png</file>
-    <file>images/splash-image.png</file>
-  </qresource>
-  <qresource prefix="white_information">
-    <file>images/icons/info_icons/white_email_icon.png</file>
-    <file>images/icons/info_icons/white_github_icon.png</file>
-    <file>images/icons/info_icons/white_instagram_icon.png</file>
-    <file>images/icons/info_icons/white_whatsapp_icon.png</file>
+    <file>imgs/login-image.png</file>
+    <file>imgs/splash-image.png</file>
   </qresource>
   <qresource prefix="icons">
-    <file>images/icons/menu_icon.png</file>
-    <file>images/icons/colaborators-icon.png</file>
-    <file>images/icons/profile-debug-icon.png</file>
-    <file>images/icons/sale-icon.png</file>
-    <file>images/icons/supplier-dark-icon.png</file>
-    <file>images/icons/supplier-white-icon.png</file>
+    <file>imgs/icons/colaborators-icon.png</file>
+    <file>imgs/icons/menu_icon.png</file>
+    <file>imgs/icons/profile-debug-icon.png</file>
+    <file>imgs/icons/sale-icon.png</file>
+    <file>imgs/icons/supplier-dark-icon.png</file>
+    <file>imgs/icons/supplier-white-icon.png</file>
+  </qresource>
+  <qresource prefix="white_information">
+    <file>imgs/icons/info_icons/white_email_icon.png</file>
+    <file>imgs/icons/info_icons/white_github_icon.png</file>
+    <file>imgs/icons/info_icons/white_instagram_icon.png</file>
+    <file>imgs/icons/info_icons/white_whatsapp_icon.png</file>
   </qresource>
   <qresource prefix="information">
-    <file>images/icons/info_icons/email_icon.png</file>
-    <file>images/icons/info_icons/github_icon.png</file>
-    <file>images/icons/info_icons/instagram_icon.png</file>
-    <file>images/icons/info_icons/whatsapp_icon.png</file>
+    <file>imgs/icons/info_icons/email_icon.png</file>
+    <file>imgs/icons/info_icons/github_icon.png</file>
+    <file>imgs/icons/info_icons/instagram_icon.png</file>
+    <file>imgs/icons/info_icons/whatsapp_icon.png</file>
   </qresource>
   <qresource prefix="mini_information">
-    <file>images/icons/info_icons/mini_email_icon.png</file>
-    <file>images/icons/info_icons/mini_github_icon.png</file>
-    <file>images/icons/info_icons/mini_instagram_icon.png</file>
-    <file>images/icons/info_icons/mini_whatsapp_icon.png</file>
+    <file>imgs/icons/info_icons/mini_email_icon.png</file>
+    <file>imgs/icons/info_icons/mini_github_icon.png</file>
+    <file>imgs/icons/info_icons/mini_instagram_icon.png</file>
+    <file>imgs/icons/info_icons/mini_whatsapp_icon.png</file>
   </qresource>
   <qresource prefix="window">
-    <file>images/icons/app/app-icon.png</file>
+    <file>imgs/icons/app/app_icon.png</file>
   </qresource>
 </RCC>
