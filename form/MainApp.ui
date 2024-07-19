@@ -112,10 +112,12 @@ QToolBox{
 
 QToolBox::tab{
 
-border-radius: 5px;
-
-background-color: rgb(194, 232, 255);
-text-align: left;																									
+	border-radius: 5px;
+	
+	background-color: rgb(194, 232, 255);
+	text-align: left;	
+	
+	color: #000000																						
 
 }</string>
          </property>
@@ -428,7 +430,7 @@ color: #ffffff
           <item>
            <widget class="QStackedWidget" name="pages_frame">
             <property name="currentIndex">
-             <number>3</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="pg_home">
              <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -460,6 +462,7 @@ color: #ffffff
 
 	background-color: rgb(255, 255, 255);
 	font: 10pt &quot;MS Shell Dlg 2&quot;;
+	color: #000000
 
 }
 
@@ -624,14 +627,15 @@ background-color: rgb(249, 249, 249);</string>
 
 	background-color: rgb(0, 170, 255);
 	border-radius: 15px;
-	color: #fff
+	color: #000000
 
 }
 
 QPushButton{
 
 	border-radius: 15px;
-	background-color: rgb(243, 243, 243)
+	background-color: rgb(243, 243, 243);
+	color: #000000
 
 }</string>
                     </property>

@@ -86,10 +86,12 @@ class Ui_MainWindow(object):
 "\n"
 "QToolBox::tab{\n"
 "\n"
-"border-radius: 5px;\n"
-"\n"
-"background-color: rgb(194, 232, 255);\n"
-"text-align: left;																									\n"
+"	border-radius: 5px;\n"
+"	\n"
+"	background-color: rgb(194, 232, 255);\n"
+"	text-align: left;	\n"
+"	\n"
+"	color: #000000																						\n"
 "\n"
 "}")
         self.frame_menu.setFrameShape(QFrame.StyledPanel)
@@ -255,6 +257,7 @@ class Ui_MainWindow(object):
 "\n"
 "	background-color: rgb(255, 255, 255);\n"
 "	font: 10pt \"MS Shell Dlg 2\";\n"
+"	color: #000000\n"
 "\n"
 "}\n"
 "\n"
@@ -354,14 +357,15 @@ class Ui_MainWindow(object):
 "\n"
 "	background-color: rgb(0, 170, 255);\n"
 "	border-radius: 15px;\n"
-"	color: #fff\n"
+"	color: #000000\n"
 "\n"
 "}\n"
 "\n"
 "QPushButton{\n"
 "\n"
 "	border-radius: 15px;\n"
-"	background-color: rgb(243, 243, 243)\n"
+"	background-color: rgb(243, 243, 243);\n"
+"	color: #000000\n"
 "\n"
 "}")
 
@@ -578,7 +582,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.toolBox.setCurrentIndex(0)
-        self.pages_frame.setCurrentIndex(3)
+        self.pages_frame.setCurrentIndex(1)
         self.tabWidget.setCurrentIndex(0)
 
 
