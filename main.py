@@ -1,6 +1,7 @@
 import sys
 
-from PySide6.QtCore import QCoreApplication, QEasingCurve, QPropertyAnimation, Qt
+# from PySide6 import QtCore
+from PySide6.QtCore import QEasingCurve, QPropertyAnimation, Qt
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication, QMainWindow
 
@@ -56,15 +57,25 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         campos = consulta_cnpj(self.let_cnpj.text())
 
         self.let_nome_empresarial.setText(campos[0])
+        # print(type(campos[0]))
         self.let_logradouro.setText(campos[1])
+        # print(type(campos[1]))
         self.let_numero.setText(campos[2])
+        # print(type(campos[2]))
         self.let_complemento.setText(campos[3])
+        # print(type(campos[3]))
         self.let_bairro.setText(campos[4])
+        # print(type(campos[4]))
         self.let_municipio.setText(campos[5])
+        # print(type(campos[5]))
         self.let_uf.setText(campos[6])
-        self.let_cep.setText(campos[7]).replace(".", "").replace("-", "")
-        self.let_telefone.setText(campos[8]).replace("(", "").replace(")", "").replace("-", "")
+        # print(type(campos[6]))
+        self.let_cep.setText(campos[7].replace(".", "").replace("-", ""))
+        # print(type(campos[7]))
+        self.let_telefone.setText(campos[8].replace("(", "").replace(")", "").replace("-", ""))
+        # print(type(campos[8]))
         self.let_email.setText(campos[9])
+        # print(type(campos[9]))
         
 
 
