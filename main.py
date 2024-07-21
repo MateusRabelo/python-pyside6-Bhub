@@ -8,6 +8,7 @@ from PySide6.QtWidgets import QApplication, QMainWindow
 
 from view.MainApp_ui import Ui_MainWindow
 from controllers.ui_functions import consulta_cnpj
+from database.database import Database
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -80,7 +81,38 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
 
 
+    def cadastrar_empresas(self):
+        db = Database()
+        db.connect()
+
+        fullDataSet = (
+            self.let_cnpj.text(),
+            self.let_nome_empresarial.text(),
+            self.let_logradouro.text(),
+            self.let_numero.text(),
+            self.let_complemento.text(),
+            self.let_bairro.text(),
+            self.let_municipio.text(),
+            self.let_uf.text(),
+            self.let_cep.text(),
+            self.let_telefone.text().strip(),
+            self.let_email.text()
+        )
+
+        # cadasrando no banco de dados
+        reps = db.register_company(fullDataSet)
+
+
+
+
 if __name__ == "__main__":
+
+    db = Database()
+    db.connect()
+    db.create_table_company()
+    db.close_connection()
+
+
     app = QApplication(sys.argv)
 
     window = MainWindow()
