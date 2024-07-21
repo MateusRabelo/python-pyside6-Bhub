@@ -3,7 +3,7 @@ import sys
 # from PySide6 import QtCore
 from PySide6.QtCore import QEasingCurve, QPropertyAnimation, Qt
 from PySide6.QtGui import QIcon
-from PySide6.QtWidgets import QApplication, QMainWindow
+from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox
 
 
 from view.MainApp_ui import Ui_MainWindow
@@ -33,6 +33,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # preencher dados automaticmente a partir do CNPJ
         self.let_cnpj.editingFinished.connect(self.api_consumer)
+
+        self.btn_cadastrar_2.clicked.connect(self.cadastrar_empresas)
+
 
 
 
@@ -100,7 +103,32 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         )
 
         # cadasrando no banco de dados
-        reps = db.register_company(fullDataSet)
+        response = db.register_company(fullDataSet)
+
+        if response == 'Ok':
+            msg = QMessageBox()
+
+            msg.setIcon(QMessageBox.Information)
+            msg.setWindowTitle("Cadastro Realizado")
+            msg.setText("Empresa cadastrada com sucesso!")
+
+            msg.exec()
+
+            db.close_connection()
+            
+            return
+        else:
+            msg = QMessageBox()
+
+            msg.setIcon(QMessageBox.Critical)
+            msg.setWindowTitle("Erro")
+            msg.setText("Erro ao cadastrar, verifique se as informações foram preenchidas corretamente!")
+
+            msg.exec()
+
+            db.close_connection()
+            
+            return
 
 
 
@@ -108,10 +136,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 if __name__ == "__main__":
 
     db = Database()
+
     db.connect()
     db.create_table_company()
     db.close_connection()
-
 
     app = QApplication(sys.argv)
 

@@ -54,6 +54,8 @@ class Database:
                 VALUES({qntd})
             """, fullDataSet)
 
+            self.connection.commit()
+
             return ('Ok')
 
         except:
