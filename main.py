@@ -56,7 +56,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             newWidth = 9
 
         self.animation = QPropertyAnimation(self.left_container, b"maximumWidth")
-        self.animation.setDuration(500)
+        self.animation.setDuration(160)
         self.animation.setStartValue(width)
         self.animation.setEndValue(newWidth)
         self.animation.setEasingCurve(QEasingCurve.InOutQuart)

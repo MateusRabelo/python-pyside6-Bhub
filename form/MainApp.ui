@@ -49,7 +49,7 @@ QLabel{
      <widget class="QFrame" name="left_container">
       <property name="maximumSize">
        <size>
-        <width>200</width>
+        <width>9</width>
         <height>16777215</height>
        </size>
       </property>
@@ -170,8 +170,8 @@ color: #ffffff
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>182</width>
-               <height>484</height>
+               <width>63</width>
+               <height>467</height>
               </rect>
              </property>
              <attribute name="label">
@@ -297,8 +297,8 @@ color: #ffffff
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>182</width>
-               <height>484</height>
+               <width>100</width>
+               <height>467</height>
               </rect>
              </property>
              <attribute name="label">
@@ -369,6 +369,9 @@ color: #ffffff
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item alignment="Qt::AlignLeft">
            <widget class="QPushButton" name="btn_toggle">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="text">
              <string/>
             </property>
