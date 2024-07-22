@@ -735,6 +735,16 @@ QTableWidget {
                       </column>
                       <column>
                        <property name="text">
+                        <string>UF</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>CEP</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
                         <string>TELEFONE</string>
                        </property>
                       </column>

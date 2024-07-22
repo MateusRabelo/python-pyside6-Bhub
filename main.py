@@ -37,8 +37,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # envia os dados para o banco de dados
         self.btn_cadastrar_2.clicked.connect(self.cadastrar_empresas)
 
+        # edita dados no banco de dados
+        self.btn_alterar.clicked.connect(self.atualizar_empresas)
+
         # atualiza as empresas ao clicar na tab de empresas cadastradas
-        self.tab_empresas_cadastradas.clicked.connect(self.buscar_empresas)
+        self.btn_cadastrar.clicked.connect(self.buscar_empresas)
 
 
 
@@ -162,7 +165,27 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             for column in range(self.tb_empresas.columnCount()):
                 dados.append(self.tb_empresas.item(row, column).text())
 
+            dados_atualizados.append(dados)
+            dados = []
 
+        # update data in database
+        db = Database()
+
+        db.connect()
+        
+        for empresa in dados_atualizados:
+            db.update_company(tuple(empresa))
+
+        db.close_connection()
+
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setWindowTitle("Atualização de dados")
+        msg.setText("Dados atualizados com sucesso!")
+        msg.exec()
+
+        self.tb_empresas.reset()
+        self.buscar_empresas()
 
 if __name__ == "__main__":
 

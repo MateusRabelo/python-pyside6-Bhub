@@ -392,8 +392,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5 = QHBoxLayout()
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.tb_empresas = QTableWidget(self.tab_empresas_cadastradas)
-        if (self.tb_empresas.columnCount() < 9):
-            self.tb_empresas.setColumnCount(9)
+        if (self.tb_empresas.columnCount() < 11):
+            self.tb_empresas.setColumnCount(11)
         __qtablewidgetitem = QTableWidgetItem()
         self.tb_empresas.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
@@ -412,6 +412,10 @@ class Ui_MainWindow(object):
         self.tb_empresas.setHorizontalHeaderItem(7, __qtablewidgetitem7)
         __qtablewidgetitem8 = QTableWidgetItem()
         self.tb_empresas.setHorizontalHeaderItem(8, __qtablewidgetitem8)
+        __qtablewidgetitem9 = QTableWidgetItem()
+        self.tb_empresas.setHorizontalHeaderItem(9, __qtablewidgetitem9)
+        __qtablewidgetitem10 = QTableWidgetItem()
+        self.tb_empresas.setHorizontalHeaderItem(10, __qtablewidgetitem10)
         self.tb_empresas.setObjectName(u"tb_empresas")
         self.tb_empresas.setStyleSheet(u"	QHeaderView::section {\n"
 "\n"
@@ -634,9 +638,13 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem6 = self.tb_empresas.horizontalHeaderItem(6)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"MUNIC\u00cdPIO", None));
         ___qtablewidgetitem7 = self.tb_empresas.horizontalHeaderItem(7)
-        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"TELEFONE", None));
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"UF", None));
         ___qtablewidgetitem8 = self.tb_empresas.horizontalHeaderItem(8)
-        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"EMAIL", None));
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"CEP", None));
+        ___qtablewidgetitem9 = self.tb_empresas.horizontalHeaderItem(9)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"TELEFONE", None));
+        ___qtablewidgetitem10 = self.tb_empresas.horizontalHeaderItem(10)
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"EMAIL", None));
         self.btn_excel.setText(QCoreApplication.translate("MainWindow", u"Gerar Excel", None))
         self.btn_alterar.setText(QCoreApplication.translate("MainWindow", u"Alterar", None))
         self.btn_excluir.setText(QCoreApplication.translate("MainWindow", u"Excluir", None))
