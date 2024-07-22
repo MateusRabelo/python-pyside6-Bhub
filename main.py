@@ -3,7 +3,7 @@ import sys
 # from PySide6 import QtCore
 from PySide6.QtCore import QEasingCurve, QPropertyAnimation, Qt
 from PySide6.QtGui import QIcon
-from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox
+from PySide6.QtWidgets import QApplication, QMainWindow, QMessageBox, QTableWidgetItem
 
 
 from view.MainApp_ui import Ui_MainWindow
@@ -34,7 +34,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         # preencher dados automaticmente a partir do CNPJ
         self.let_cnpj.editingFinished.connect(self.api_consumer)
 
+        # envia os dados para o banco de dados
         self.btn_cadastrar_2.clicked.connect(self.cadastrar_empresas)
+
+        # atualiza as empresas ao clicar na tab de empresas cadastradas
+        self.tab_empresas_cadastradas.clicked.connect(self.buscar_empresas)
 
 
 
@@ -130,6 +134,33 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             
             return
 
+
+
+
+    def buscar_empresas(self):
+        db = Database()
+
+        db.connect()
+        result = db.select_all_companies()
+
+        self.tb_empresas.clearContents()
+        self.tb_empresas.setRowCount(len(result))
+
+        for row, text in enumerate(result):
+            for column, data in enumerate(text):
+                self.tb_empresas.setItem(row, column, QTableWidgetItem(str(data)))
+
+        db.close_connection()
+
+
+
+    def atualizar_empresas(self):
+        dados = []
+        dados_atualizados = []
+
+        for row in range(self.tb_empresas.rowCount()):
+            for column in range(self.tb_empresas.columnCount()):
+                dados.append(self.tb_empresas.item(row, column).text())
 
 
 

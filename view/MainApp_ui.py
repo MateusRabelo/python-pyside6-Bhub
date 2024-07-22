@@ -247,11 +247,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
         self.tabWidget = QTabWidget(self.pg_cadastrar)
         self.tabWidget.setObjectName(u"tabWidget")
-        self.tab = QWidget()
-        self.tab.setObjectName(u"tab")
-        self.verticalLayout_11 = QVBoxLayout(self.tab)
+        self.tab_cadastro = QWidget()
+        self.tab_cadastro.setObjectName(u"tab_cadastro")
+        self.verticalLayout_11 = QVBoxLayout(self.tab_cadastro)
         self.verticalLayout_11.setObjectName(u"verticalLayout_11")
-        self.frame_4 = QFrame(self.tab)
+        self.frame_4 = QFrame(self.tab_cadastro)
         self.frame_4.setObjectName(u"frame_4")
         self.frame_4.setStyleSheet(u"QLineEdit{\n"
 "\n"
@@ -346,7 +346,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_11.addWidget(self.frame_4)
 
-        self.btn_cadastrar_2 = QPushButton(self.tab)
+        self.btn_cadastrar_2 = QPushButton(self.tab_cadastro)
         self.btn_cadastrar_2.setObjectName(u"btn_cadastrar_2")
         self.btn_cadastrar_2.setMinimumSize(QSize(160, 30))
         font1 = QFont()
@@ -371,12 +371,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_11.addWidget(self.btn_cadastrar_2, 0, Qt.AlignHCenter)
 
-        self.tabWidget.addTab(self.tab, "")
-        self.tab_2 = QWidget()
-        self.tab_2.setObjectName(u"tab_2")
-        self.verticalLayout_10 = QVBoxLayout(self.tab_2)
+        self.tabWidget.addTab(self.tab_cadastro, "")
+        self.tab_empresas_cadastradas = QWidget()
+        self.tab_empresas_cadastradas.setObjectName(u"tab_empresas_cadastradas")
+        self.verticalLayout_10 = QVBoxLayout(self.tab_empresas_cadastradas)
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
-        self.lbl_empresas = QLabel(self.tab_2)
+        self.lbl_empresas = QLabel(self.tab_empresas_cadastradas)
         self.lbl_empresas.setObjectName(u"lbl_empresas")
         self.lbl_empresas.setMinimumSize(QSize(0, 80))
         font2 = QFont()
@@ -391,29 +391,29 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_5 = QHBoxLayout()
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
-        self.tableWidget = QTableWidget(self.tab_2)
-        if (self.tableWidget.columnCount() < 9):
-            self.tableWidget.setColumnCount(9)
+        self.tb_empresas = QTableWidget(self.tab_empresas_cadastradas)
+        if (self.tb_empresas.columnCount() < 9):
+            self.tb_empresas.setColumnCount(9)
         __qtablewidgetitem = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        self.tb_empresas.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        self.tb_empresas.setHorizontalHeaderItem(1, __qtablewidgetitem1)
         __qtablewidgetitem2 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        self.tb_empresas.setHorizontalHeaderItem(2, __qtablewidgetitem2)
         __qtablewidgetitem3 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tb_empresas.setHorizontalHeaderItem(3, __qtablewidgetitem3)
         __qtablewidgetitem4 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem4)
+        self.tb_empresas.setHorizontalHeaderItem(4, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(5, __qtablewidgetitem5)
+        self.tb_empresas.setHorizontalHeaderItem(5, __qtablewidgetitem5)
         __qtablewidgetitem6 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(6, __qtablewidgetitem6)
+        self.tb_empresas.setHorizontalHeaderItem(6, __qtablewidgetitem6)
         __qtablewidgetitem7 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(7, __qtablewidgetitem7)
+        self.tb_empresas.setHorizontalHeaderItem(7, __qtablewidgetitem7)
         __qtablewidgetitem8 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(8, __qtablewidgetitem8)
-        self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setStyleSheet(u"	QHeaderView::section {\n"
+        self.tb_empresas.setHorizontalHeaderItem(8, __qtablewidgetitem8)
+        self.tb_empresas.setObjectName(u"tb_empresas")
+        self.tb_empresas.setStyleSheet(u"	QHeaderView::section {\n"
 "\n"
 "	background-color: rgb(148, 148, 148);\n"
 "	color: #ffffff;\n"
@@ -423,13 +423,14 @@ class Ui_MainWindow(object):
 "\n"
 "QTableWidget {\n"
 "\n"
-"background-color: rgb(252, 252, 252);\n"
+"	background-color: rgb(252, 252, 252);\n"
+"	color: #000\n"
 "\n"
 "}")
 
-        self.horizontalLayout_5.addWidget(self.tableWidget)
+        self.horizontalLayout_5.addWidget(self.tb_empresas)
 
-        self.frame_3 = QFrame(self.tab_2)
+        self.frame_3 = QFrame(self.tab_empresas_cadastradas)
         self.frame_3.setObjectName(u"frame_3")
         self.frame_3.setStyleSheet(u"QPushButton{\n"
 "\n"
@@ -498,7 +499,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_10.addLayout(self.horizontalLayout_5)
 
-        self.tabWidget.addTab(self.tab_2, "")
+        self.tabWidget.addTab(self.tab_empresas_cadastradas, "")
 
         self.verticalLayout_8.addWidget(self.tabWidget)
 
@@ -582,8 +583,8 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.toolBox.setCurrentIndex(0)
-        self.pages_frame.setCurrentIndex(1)
-        self.tabWidget.setCurrentIndex(0)
+        self.pages_frame.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -616,30 +617,30 @@ class Ui_MainWindow(object):
         self.let_email.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Email", None))
         self.lbl_enterprises_title.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:16pt; font-weight:600;\">CADASTRO DE EMPRESAS</span></p></body></html>", None))
         self.btn_cadastrar_2.setText(QCoreApplication.translate("MainWindow", u"Cadastrar", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"Cadastro", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_cadastro), QCoreApplication.translate("MainWindow", u"Cadastro", None))
         self.lbl_empresas.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" color:#006394;\">EMPRESAS</span></p></body></html>", None))
-        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem = self.tb_empresas.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"CNPJ", None));
-        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1 = self.tb_empresas.horizontalHeaderItem(1)
         ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"NOME", None));
-        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2 = self.tb_empresas.horizontalHeaderItem(2)
         ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"LOGRADOURO", None));
-        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3 = self.tb_empresas.horizontalHeaderItem(3)
         ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"NUMERO", None));
-        ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
+        ___qtablewidgetitem4 = self.tb_empresas.horizontalHeaderItem(4)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"COMPLEMENTO", None));
-        ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
+        ___qtablewidgetitem5 = self.tb_empresas.horizontalHeaderItem(5)
         ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"BAIRRO", None));
-        ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(6)
+        ___qtablewidgetitem6 = self.tb_empresas.horizontalHeaderItem(6)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"MUNIC\u00cdPIO", None));
-        ___qtablewidgetitem7 = self.tableWidget.horizontalHeaderItem(7)
+        ___qtablewidgetitem7 = self.tb_empresas.horizontalHeaderItem(7)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"TELEFONE", None));
-        ___qtablewidgetitem8 = self.tableWidget.horizontalHeaderItem(8)
+        ___qtablewidgetitem8 = self.tb_empresas.horizontalHeaderItem(8)
         ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"EMAIL", None));
         self.btn_excel.setText(QCoreApplication.translate("MainWindow", u"Gerar Excel", None))
         self.btn_alterar.setText(QCoreApplication.translate("MainWindow", u"Alterar", None))
         self.btn_excluir.setText(QCoreApplication.translate("MainWindow", u"Excluir", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Empresas", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_empresas_cadastradas), QCoreApplication.translate("MainWindow", u"Empresas", None))
         self.lbl_contatos_title.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:24pt; font-weight:600;\">CONTATOS</span></p></body></html>", None))
         self.lbl_whatsapp.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/white_information/imgs/icons/info_icons/white_whatsapp_icon.png\"/><span style=\" font-size:26pt; font-weight:600; vertical-align:super;\">WhastApp</span></p><p align=\"center\"><br/></p></body></html>", None))
         self.lbl_email.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/white_information/imgs/icons/info_icons/white_email_icon.png\"/><span style=\" font-size:26pt; font-weight:600; vertical-align:super;\">Email</span></p><p align=\"center\"><br/></p></body></html>", None))

@@ -6,12 +6,12 @@ class Database:
         self.name = name
 
 
-
+    # start database connection
     def connect(self):
         self.connection = sqlite3.connect(self.name) # conectando no banco de dados
 
 
-
+    # close database connection
     def close_connection(self):
         try:
             self.connection.close() # fechando a conexão
@@ -19,7 +19,7 @@ class Database:
             pass
 
 
-
+    # create a new table in the database
     def create_table_company(self):
         cursor = self.connection.cursor()
         cursor.execute(f"""
@@ -41,7 +41,7 @@ class Database:
         """)
 
     
-
+    # insert the data into the database
     def register_company(self, fullDataSet):
         campos_tabela = ('CNPJ', 'NOME', 'LOGRADOURO', 'NUMERO', 'COMPLEMENTO', 'BAIRRO', 'MUNICIPIO', 'UF', 'CEP', 'TELEFONE', 'EMAIL')
         qntd = ("?,?,?,?,?,?,?,?,?,?,?")
@@ -62,7 +62,7 @@ class Database:
             return 'Error'
 
 
-
+    # select all companies from database
     def select_all_companies(self):
         try:
             cursor = self.connection.cursor()
@@ -75,7 +75,7 @@ class Database:
             return 'Error'
         
     
-
+    # delete a specify company
     def delete_company(self):
         try:
             cursor = self.connection.cursor()
@@ -88,7 +88,7 @@ class Database:
             return "Erro ao deletar dados!"
         
 
-
+    # update a company data
     def update_company(self, fullDataSet):
         cursor = self.connection.cursor()
 

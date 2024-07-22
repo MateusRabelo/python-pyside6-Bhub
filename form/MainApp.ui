@@ -430,7 +430,7 @@ color: #ffffff
           <item>
            <widget class="QStackedWidget" name="pages_frame">
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="pg_home">
              <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -448,9 +448,9 @@ color: #ffffff
               <item>
                <widget class="QTabWidget" name="tabWidget">
                 <property name="currentIndex">
-                 <number>0</number>
+                 <number>1</number>
                 </property>
-                <widget class="QWidget" name="tab">
+                <widget class="QWidget" name="tab_cadastro">
                  <attribute name="title">
                   <string>Cadastro</string>
                  </attribute>
@@ -646,7 +646,7 @@ QPushButton{
                   </item>
                  </layout>
                 </widget>
-                <widget class="QWidget" name="tab_2">
+                <widget class="QWidget" name="tab_empresas_cadastradas">
                  <attribute name="title">
                   <string>Empresas</string>
                  </attribute>
@@ -681,7 +681,7 @@ background-color: rgb(249, 249, 249);</string>
                   <item>
                    <layout class="QHBoxLayout" name="horizontalLayout_5">
                     <item>
-                     <widget class="QTableWidget" name="tableWidget">
+                     <widget class="QTableWidget" name="tb_empresas">
                       <property name="styleSheet">
                        <string notr="true">	QHeaderView::section {
 
@@ -693,7 +693,8 @@ background-color: rgb(249, 249, 249);</string>
 
 QTableWidget {
 
-background-color: rgb(252, 252, 252);
+	background-color: rgb(252, 252, 252);
+	color: #000
 
 }</string>
                       </property>
