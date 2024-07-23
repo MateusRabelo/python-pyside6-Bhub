@@ -76,7 +76,7 @@ class Database:
         
     
     # delete a specify company
-    def delete_company(self):
+    def delete_company(self, id):
         try:
             cursor = self.connection.cursor()
             cursor.execute(f"DELETE FROM Empresas WHERE CNPJ = '{id}'")

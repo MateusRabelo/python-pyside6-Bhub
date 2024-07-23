@@ -42,6 +42,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # atualiza as empresas ao clicar na tab de empresas cadastradas
         self.btn_cadastrar.clicked.connect(self.buscar_empresas)
+        self.buscar_empresas()
+
+        # deletar empresa selecionada
+        self.btn_excluir.clicked.connect(self.deletar_empresa)
 
 
 
@@ -186,6 +190,33 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         self.tb_empresas.reset()
         self.buscar_empresas()
+
+
+
+    def deletar_empresa(self):
+        db = Database()
+
+        db.connect()
+        
+        msg = QMessageBox()
+        msg.setWindowTitle("Excluir empresa")
+        msg.setText("Tem certeza que deseja excluir a empresa?")
+        msg.setInformativeText("Você tem certeza que deseja excluir?")
+        msg.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+        resp = msg.exec()
+
+        if resp == QMessageBox.Yes:
+            cnpj = self.tb_empresas.selectionModel().currentIndex().siblingAtColumn(0).data()
+            result = db.delete_company(cnpj)
+            self.buscar_empresas()
+
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Information)
+            msg.setWindowTitle("Empresas")
+            msg.setText(result)
+            msg.exec()
+
+        db.close_connection()
 
 if __name__ == "__main__":
 
