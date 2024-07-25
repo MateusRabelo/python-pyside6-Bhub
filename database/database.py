@@ -1,9 +1,12 @@
 import sqlite3
+import os
 
 class Database:
-    def __init__(self, name = 'system.db') -> None:
+    def __init__(self, db_path='./database/', db_name='system.db') -> None:
 
-        self.name = name
+        self.db_path = db_path
+        self.db_name = db_name
+        self.name = os.path.join(self.db_path, self.db_name)
 
 
     # start database connection

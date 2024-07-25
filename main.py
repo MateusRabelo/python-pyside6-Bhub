@@ -1,4 +1,7 @@
 import sys
+import pandas as pd
+import sqlite3
+import os
 
 # from PySide6 import QtCore
 from PySide6.QtCore import QEasingCurve, QPropertyAnimation, Qt
@@ -46,6 +49,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # deletar empresa selecionada
         self.btn_excluir.clicked.connect(self.deletar_empresa)
+
+        # gerar excel
+        self.btn_excel.clicked.connect(self.gerar_excel_db)
 
 
 
@@ -217,6 +223,48 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             msg.exec()
 
         db.close_connection()
+
+
+    # sistema manual para geração de relatórios excel
+    def gerar_excel(self):
+        
+        dados = []
+        total_dados = []
+
+        for row in range(self.tb_empresas.rowCount()):
+            for column in range(self.tb_empresas.columnCount()):
+                dados.append(self.tb_empresas.item(row, column).text())
+
+            total_dados.append(dados)
+            dados = []
+
+        columns = ['CNPJ', 'NOME', 'LOGRADOURO', 'NUMERO', 'COMPLEMENTO', 'BAIRRO', 'MUNICIPIO', 'UF', 'CEP', 'TELEFONE', 'EMAIL']
+
+        empresas = pd.DataFrame(total_dados, columns= columns)
+        empresas.to_excel('Relatório de empresas.xlsx', sheet_name= 'empresas', index= False)
+
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setWindowTitle("Gerar Excel")
+        msg.setText("Relatório gerado com sucesso!")
+        msg.exec()
+
+
+    # função mais simples para geração de relatórios excel
+    def gerar_excel_db(self):
+        
+        connection = sqlite3.connect(os.path.join("./database", 'system.db'))
+        
+        query_empresas = pd.read_sql_query("""SELECT * FROM Empresas""", connection)
+
+        query_empresas.to_excel('reports/Relatório de empresas.xlsx', sheet_name= 'empresas', index= False)
+
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setWindowTitle("Gerar Excel")
+        msg.setText("Relatório gerado com sucesso!")
+        msg.exec()
+
 
 if __name__ == "__main__":
 
